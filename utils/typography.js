@@ -7,10 +7,10 @@ import CodePlugin from 'typography-plugin-code'
 const options = {
   googleFonts: [
     {
-      name: 'Roboto',
+      name: 'Open Sans',
       styles: [
         '400',
-        '400i',        
+        '400i',
         '700'
       ]
     }
