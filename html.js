@@ -3,6 +3,8 @@ import Helmet from "react-helmet"
 
 import { prefixLink } from 'gatsby-helpers'
 
+import styleSheet from 'styled-components/lib/models/StyleSheet';
+
 const BUILD_TIME = new Date().getTime()
 
 module.exports = React.createClass({
@@ -14,10 +16,13 @@ module.exports = React.createClass({
   render () {
     const head = Helmet.rewind()
 
-    let css
-    if (process.env.NODE_ENV === 'production') {
-      css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
-    }
+    // styled-components
+    const styles = styleSheet.sheet ? styleSheet.rules().map(rule => rule.cssText).join('\n') : null;
+
+    // let css
+    // if (process.env.NODE_ENV === 'production') {
+    //   css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
+    // }
 
     return (
       <html lang="en">
