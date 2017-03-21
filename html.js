@@ -1,8 +1,6 @@
 import React from 'react'
 import Helmet from "react-helmet"
-
 import { prefixLink } from 'gatsby-helpers'
-
 import styleSheet from 'styled-components/lib/models/StyleSheet';
 
 const BUILD_TIME = new Date().getTime()

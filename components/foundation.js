@@ -1,5 +1,10 @@
 const colors = {
-  primaryPurple : '354270',
+  // Primary
+  primaryPurple : '#36436f',
+
+  // Gradient
+  gradientBlue : '#2E59E1',
+  gradientPink : '#B45EB6'
 }
 
 const scale = {
